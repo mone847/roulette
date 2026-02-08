@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,
+            user-scalable=no">
+    <script type="module" src="https://pyscript.net/releases/2026.2.1/core.js"></script>
+</head>
+
+<!-- CSS -->
+<style>
+body {text-align:center;}
+#disp{font-size:8em; color:white;}
+#image_area{padding-top:100px;}
+#roullette{
+    width:500px;
+    height:500px;
+}
+/*  回転アニメーションの定義　*/
+@keyframes spin {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+</style>
+
+<body>
+    <div style="padding:2em;">
+        <button mpy-click="start">ルーレットを回す</button><br>
+    </div>
+    <div id="image_area">
+        <img id="roulette" src="roulette.png">
+    </div>
+    <div id="disp"></div>
+
+    <!-- 外部pyscript -->
+    <script type="mpy" src="main.py"></script>
+</body>
+</html>
